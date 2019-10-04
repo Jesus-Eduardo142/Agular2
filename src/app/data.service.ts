@@ -8,7 +8,7 @@ import {Game} from './game';
 @Injectable()
 export class DataService {
 
-  apiURL = 'https://compact-booking-.appspot.com';
+  apiURL = 'https://miproyecto2-254822.appspot.com';
 
   constructor(private http: HttpClient) {}
 
