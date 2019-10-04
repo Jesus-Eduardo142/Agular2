@@ -1,0 +1,26 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add a bucket list item</p>
+  </div>
+  <div class="col">
+    <p>Your bucket silly list </p>
+  </div>
+</div>
+<div class="container color-light">
+  <div class="col">
+    <p class="sm">Use this form below to add a new bucket list goal. What do you want to do with your life?</p>
+    <form>
+      <input type="text" class="text" name="item" placeholder="name" [(ngModel)]= "name">
+      <input type="text" class="text" name="item2" placeholder="developer" [(ngModel)]= "developer">
+      <input type="text" class="text" name="item3" placeholder="gamesystem " [(ngModel)]= "gameSystem">
+      <input type="text" class="text" name="item4" placeholder="genere " [(ngModel)]= "genre">
+      <input type="text" class="text" name="item5" placeholder="year " [(ngModel)]= "year">
+      <input type="submit" class="btn" value="Agregar" (click)="post()">
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor= "let game of games" (click)="delete(game.id)">
+      {{game.name}}
+    </p>
+  </div>
+</div>

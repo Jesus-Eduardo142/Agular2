@@ -1,0 +1,25 @@
+<div class="container color-dark">
+    <div class="col">
+        <p>agrega</p>
+    </div>
+    <div class="col">
+        <p>lista  </p>
+    </div>
+</div>
+<div class="container color-light">
+    <div class="col">
+    <p class="sm">agrega lo que quieras siempre y cunado sean juegos
+    
+    </p>
+    <form>
+        <input type="text" class="text" name="item" placeholder="Name..." [(ngModel)]= "name">
+        <input type="text" class="text" name="item" placeholder="Description..." [(ngModel)]= "description">
+        <input type="submit" class="btn" value="Agregar" (click)="post()">
+    </form>
+</div>
+<div class="col">
+    <p class="life-container" *ngFor= "let gamesystem of gameSystems;" (click)="delete(gamesystem.id)">
+        {{gamesystem.name}}
+    </p>
+    </div>
+</div>
